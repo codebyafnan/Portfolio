@@ -163,3 +163,142 @@
 	}
 }
 
+
+
+/*------------------------------------------------------------------
+    Projects
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+    Projects - Responsive for all devices
+-------------------------------------------------------------------*/
+/* Main container for services grid */
+.owl-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    width: 100%;
+    padding: 0px;
+}
+
+/* Each service box styling */
+.service-widget {
+    position: relative;
+    overflow: hidden;
+    height: 150px;
+    min-height: 300px;
+    transition: transform 0.3s ease;
+}
+
+/* Image styling */
+.post-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* DEFAULT overlay (semi-dark) */
+.post-media::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+/* Visit link button (centered) */
+.hoverbutton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    z-index: 2;
+    background: #067ded;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.4s ease;
+}
+
+/* Hover effects */
+.service-widget:hover {
+    transform: translateY(-2px);
+}
+.service-widget:hover .post-media img {
+    transform: scale(0.97);
+}
+.service-widget:hover .post-media::after {
+    background: rgba(0, 0, 0, 0.6);
+}
+.service-widget:hover .hoverbutton {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+    /* Tablet landscape and smaller laptops */
+    .owl-services {
+        gap: 20px;
+    }
+    .service-widget {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Tablets */
+    .owl-services {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    .service-widget {
+        min-height: 250px;
+    }
+    .hoverbutton {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Mobile landscape and small tablets */
+    .owl-services {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+    }
+    .service-widget {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 575px) {
+    /* Mobile portrait */
+    .owl-services {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .service-widget {
+        min-height: 200px;
+    }
+    .hoverbutton {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+}
+
+/* For very small mobile devices */
+@media (max-width: 400px) {
+    .service-widget {
+        min-height: 100px;
+    }
+}
