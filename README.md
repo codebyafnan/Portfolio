@@ -1,6 +1,6 @@
 # My Portfolio
 Welcome to my portfolio! This project showcases my skills, projects, and experiences as a web developer.
-# WebLink: https://codebyafnan.github.io/Portfolio/
+# WebLink: https://codebyafnan.netlify.app
 
 #Some Images:
 ![1](https://github.com/user-attachments/assets/e2649793-c06b-42f0-a88e-0aebe9161622)
