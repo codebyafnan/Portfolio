@@ -104,9 +104,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-  ----------------------------------------
+  /* ---------------------------------------- 
 # Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
+------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
@@ -463,27 +463,47 @@ section {
 /*--------------------------------------------------------------
 # skills
 --------------------------------------------------------------*/
-#skill .progress {
-  height: 5px;
-  border-radius: 5px;
+.skills-section {
+  padding: 50px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#skill .progress .progress-bar {
-  width: 0px;
-  border-radius: 5px;
-  transition: 3s;
+.skills-section .section-title h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #0A2463;
 }
 
-#skill .nav-pills .nav-link {
-  color: var(--dark);
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-#skill .nav-pills .nav-link.active {
-  color: #FFFFFF;
+.skill-card {
+  color: #0A2463;
+  font-weight: 600;
+  text-align: center;
+  padding: 12px 8px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  /* 3D border effect */
+  background-color: #ffffff;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.2), 
+              -3px -3px 6px rgba(255,255,255,0.7);
 }
 
-#skill .tab-content hr {
-  width: 30px;
+/* Hover effect */
+.skill-card:hover {
+  background-color: #0A2463; /* blue background */
+  color: #ffffff; /* white text */
+  transform: translateY(-3px); /* slight lift */
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3); /* stronger shadow on hover */
 }
 
 
